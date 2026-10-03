@@ -1,5 +1,7 @@
 # AI Front Desk (Challenger School Berryessa, unofficial prototype)
 
+> **This project now lives in [applied-ai-agents](https://github.com/roy-vinay/applied-ai-agents/tree/main/agents/school-front-desk)**, alongside my other agents. This repo stays up for its live demo and history.
+
 A parent-facing assistant that answers general school-policy questions with citations, plus an
 operator console where staff see what's being asked, publish new answers, and pick up anything the
 assistant shouldn't handle.
