@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI Front Desk (Challenger School Berryessa, unofficial prototype)
 
-## Getting Started
+A parent-facing assistant that answers general school-policy questions with citations, plus an
+operator console where staff see what's being asked, publish new answers, and pick up anything the
+assistant shouldn't handle.
 
-First, run the development server:
+**Live demo:** https://berryessa-ai-front-desk-unofficial.vercel.app ·
+**Full write-up:** [EXPLAINER.md](EXPLAINER.md)
+
+> Unofficial prototype built on the school's published policies. Not affiliated with or endorsed by
+> Challenger School.
+
+## What it does
+
+- **Grounded answers with citations** on hours, tuition, uniforms, pickup, illness, and similar topics
+- **Clarifies or escalates** instead of guessing; never touches student records or makes policy exceptions
+- **Bilingual** (English and Spanish)
+- **Operator console:** question log, attention queue, insight clusters, and a knowledge-base editor
+- **Policy ingestion** from Google Drive
+- **Fallback engine** that keeps answering deterministically if the model is unavailable
+
+## How it's built
+
+Next.js on Vercel, Claude with forced structured output (one response tool, so every answer carries
+its grounding and escalation fields), and an operator-managed knowledge base.
+
+## Evals
+
+`evals/` holds scenario cases scored by an LLM judge. The eval runner calls the same system prompt and
+tool schema as production, so a failure reflects real behavior.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000, operator view at /operator
+npm run evals    # needs ANTHROPIC_API_KEY in .env.local
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

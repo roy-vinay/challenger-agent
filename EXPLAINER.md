@@ -1,7 +1,7 @@
 # AI Front Desk — Explainer
 
 **Live app:** https://berryessa-ai-front-desk-unofficial.vercel.app · **Operator view:** `/operator` (password-protected)
-**Source:** https://github.com/NeutoAI/challenger-agent
+**Source:** https://github.com/roy-vinay/challenger-agent
 
 ## At a glance
 
