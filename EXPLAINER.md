@@ -18,7 +18,6 @@
 An AI front desk for Challenger School – Berryessa: a parent-facing chat that answers general center-policy questions (hours, tuition, uniforms, pickup, illness, etc.), and an operator control center where staff review what's being asked, publish new knowledge, and resolve items the assistant couldn't handle. It's an unofficial prototype built for a job-application exercise — not affiliated with, endorsed by, or operated by Challenger School — using the school's real, published policies as content so the demo reflects a genuine use case rather than invented data.
 
 
-
 ## Problem and product goals
 
 The prototype is designed to reduce repetitive front-office questions without creating risk through unsupported or personalized answers.
