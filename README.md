@@ -7,6 +7,8 @@ assistant shouldn't handle.
 **Live demo:** https://berryessa-ai-front-desk-unofficial.vercel.app ·
 **Full write-up:** [EXPLAINER.md](EXPLAINER.md)
 
+![Parent asks about a fever; the assistant answers from school policy with a citation](docs/screenshot.png)
+
 > Unofficial prototype built on the school's published policies. Not affiliated with or endorsed by
 > Challenger School.
 
